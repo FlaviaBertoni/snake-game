@@ -1,0 +1,83 @@
+body {
+    background: #000000;
+    margin: 0;
+    font-family: 'Lucida Console',monospace;
+}
+
+.board {
+    background: #212121;
+    position: relative;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.snake-body {
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    background: #689f38;
+    z-index: 2;
+}
+
+.board span:nth-of-type(1) {
+    z-index: 2;
+    border-radius: 0 1rem 1rem 0;
+}
+
+.board .snake-body:nth-of-type(odd) {
+    background: #99d066;
+}
+
+.apple {
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    background: #ff9800;
+    border-radius: 1rem;
+}
+
+#score {
+    font-size: 4rem;
+    color: #484848;
+    text-align: center;
+}
+
+#restart {
+    display: none;
+    margin-left: 1rem;
+    text-align: center;
+    z-index: 4;
+    opacity: 1;
+    position: absolute;
+}
+
+#restart p {
+    font-size: 4rem;
+    color: #ff6f60;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #000;
+    opacity: 0.5;
+    z-index: 3;
+    display: none;
+}
